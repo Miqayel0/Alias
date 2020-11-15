@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Permissions\Queries\**" />
+    <EmbeddedResource Remove="Permissions\Queries\**" />
+    <None Remove="Permissions\Queries\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Account\Queries\" />
+    <Folder Include="Games\Queries\" />
+    <Folder Include="Products\Commands\Create\" />
+    <Folder Include="Roles\Queries\" />
+    <Folder Include="Users\Queries\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Ardalis.GuardClauses" Version="3.0.0" />
+    <PackageReference Include="FluentValidation" Version="9.2.2" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="9.2.0" />
+    <PackageReference Include="MediatR" Version="8.1.0" />
+    <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Authorization" Version="3.1.8" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Core" Version="1.1.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Core" Version="3.1.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Alias.Domain\Alias.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
